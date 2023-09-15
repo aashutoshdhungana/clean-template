@@ -10,10 +10,10 @@ namespace CleanTemplate.Infrastructure.Implementations
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _context;
-        private readonly ILogger _logger;
+        private readonly ILogger<UnitOfWork> _logger;
         private Hashtable _repositories;
 
-        public UnitOfWork(ApplicationDbContext dbContext, ILogger logger)
+        public UnitOfWork(ApplicationDbContext dbContext, ILogger<UnitOfWork> logger)
         {
             _context = dbContext;
             _logger = logger;
